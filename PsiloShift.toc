@@ -1,0 +1,9 @@
+## Interface: 20501
+## Version: v2-classic
+## Title: PsiloShift
+## Notes: Helper addon for druid powershift macros
+## Author: Psilocybin-Mograine
+## SavedVariables: PSILOSHIFT
+
+PsiloShift.lua
+

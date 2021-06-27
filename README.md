@@ -51,6 +51,7 @@ Can mix and match with sapper cooldown, healthstone cooldown, also supports my m
 
 ## Actionbar form order
 The formStart function will set your actionbar to a number from 1-6 using the following logic:
+
 `/changeactionbar [noform] 1; [form:1] 2; [form:3] 3; [form:4] 4; [form:5] 5 ; 6;`
 
 # Questions? 

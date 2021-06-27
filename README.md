@@ -44,7 +44,6 @@ Can mix and match with sapper cooldown, healthstone cooldown, also supports my m
 /click shiftSap
 /click formStart
 /use [mod:shift]Super Sapper Charge;Goblin Sapper Charge
-/cast [noform:1]!Dire Bear Form
 /click formEnd
 ```
 

@@ -12,7 +12,7 @@ Can mix and match with sapper cooldown, healthstone cooldown, also supports my m
 ```lua
 /stopattack
 /click formStart
-# Put conumables here if you want
+# Put consumables here if you want
 /click formEnd
 /startattack
 ```

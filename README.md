@@ -5,6 +5,9 @@ Takes the safe shift macro made by Fyroth and Zia on the Druid Discord and minif
 
 Can mix and match with sapper cooldown, healthstone cooldown, also supports my multi form shapeshift macro (the one with the actionbars), so you can powershift from any form back to the same form.
 
+## Download
+Find the most recent release here: https://github.com/HxxxxxS/PsiloShift/releases
+
 ## Macro examples:
 
 ### Powershift only

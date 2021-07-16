@@ -54,6 +54,9 @@ The formStart function will set your actionbar to a number from 1-6 using the fo
 `/changeactionbar [noform] 1; [form:1] 2; [form:3] 3; [form:4] 4; [form:5] 5 ; 6;`
 
 ## Available commands and what they are shortening
+* `/click stunCheck` - `/run if C_LossOfControl.GetActiveLossOfControlDataCount() then SetCVar("autoUnshift",0) end`
+
+    Disables autoUnshift if we are stunned. Inherited by shiftStart and formStart.
 * `/click shiftStart` - `/run if GetSpellCooldown(768)>0 or UnitPower("player",0)<GetSpellPowerCost(768)[1].cost then SetCVar("autoUnshift",0) end`
 
     Only checks cooldown and spell cost of shapeshifting, disables autoUnshift if necessary.
@@ -64,7 +67,7 @@ The formStart function will set your actionbar to a number from 1-6 using the fo
 * `/click shiftSap` - same thing as above, but for Sappers instead of pots
 * `/click shiftEnd` - `/run SetCVar("autoUnshift",1)`
 
-    Disabled enables autoUnshift again at end of macro.
+    Enables autoUnshift again at end of macro.
 * `/click formStart` - `/changeactionbar [noform]1;[form:1]2;[form:3]3;[form:4]4;[form:5]5;6;`
 
     Changes your actionbar number based on current form. We can then use actionbar number as a variable to get back into the same form later.

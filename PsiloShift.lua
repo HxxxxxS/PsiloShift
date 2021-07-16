@@ -10,40 +10,48 @@ do
     end
 
     PSprint("available commands:")
+
+    do
+        local name = "stunCheck"
+        local b = _G[name] or CreateFrame('Button', name, nil, 'SecureActionButtonTemplate,SecureHandlerBaseTemplate');
+        b:SetAttribute('type', 'macro');
+        b:SetAttribute('macrotext', '/run if C_LossOfControl.GetActiveLossOfControlDataCount()>1 then SetCVar("autoUnshift",0) end');
+        PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift if stunned (inherited in |cff00ffffshiftStart |rand |cff00ffffformStart|r)")
+    end    
     do
         local name = "shiftStart"
         local b = _G[name] or CreateFrame('Button', name, nil, 'SecureActionButtonTemplate,SecureHandlerBaseTemplate');
         b:SetAttribute('type', 'macro');
-        b:SetAttribute('macrotext', '/run if GetSpellCooldown(768)>0 or UnitPower("player",0)<GetSpellPowerCost(768)[1].cost then SetCVar("autoUnshift",0) end');
-        PSprint("'/click "..name.."' |cff00ff00- enable autoUnshift if cast ready (start of macro)")
+        b:SetAttribute('macrotext', '/click stunCheck\n/run if GetSpellCooldown(768)>0 or UnitPower("player",0)<GetSpellPowerCost(768)[1].cost then SetCVar("autoUnshift",0) end');
+        PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift if on GCD (start of macro)")
     end
     do
         local name = "shiftEnd"
         local b = _G[name] or CreateFrame('Button', name, nil, 'SecureActionButtonTemplate,SecureHandlerBaseTemplate');
         b:SetAttribute('type', 'macro');
         b:SetAttribute('macrotext', '/run SetCVar("autoUnshift",1)');
-        PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift (end of macro)")
+        PSprint("'/click "..name.."' |cff00ff00- enable autoUnshift (end of macro)")
     end
     do
         local name = "shiftPot"
         local b = _G[name] or CreateFrame('Button', name, nil, 'SecureActionButtonTemplate,SecureHandlerBaseTemplate');
         b:SetAttribute('type', 'macro');
         b:SetAttribute('macrotext', '/click formStart\n/run if GetItemCooldown(13446)>0 then SetCVar("autoUnshift",0) end');
-        PSprint("'/click "..name.."' |cff00ff00- enable autoUnshift if pot cooldown is ready (start of macro), inherits from |cff00ffffshiftStart")
+        PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift if potions are on CD (start of macro), also inherits from |cff00ffffshiftStart")
     end
     do
         local name = "shiftHS"
         local b = _G[name] or CreateFrame('Button', name, nil, 'SecureActionButtonTemplate,SecureHandlerBaseTemplate');
         b:SetAttribute('type', 'macro');
         b:SetAttribute('macrotext', '/click formStart\n/run if GetItemCooldown(20520)>0 then SetCVar("autoUnshift",0) end');
-        PSprint("'/click "..name.."' |cff00ff00- enable autoUnshift if health stone cooldown is ready (start of macro), inherits from |cff00ffffshiftStart")
+        PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift if healthstone is on CD (start of macro), inherits from |cff00ffffshiftStart")
     end
     do
         local name = "shiftSap"
         local b = _G[name] or CreateFrame('Button', name, nil, 'SecureActionButtonTemplate,SecureHandlerBaseTemplate');
         b:SetAttribute('type', 'macro');
         b:SetAttribute('macrotext', '/click formStart\n/run if GetItemCooldown(10646)>0 then SetCVar("autoUnshift",0) end');
-        PSprint("'/click "..name.."' |cff00ff00- enable autoUnshift if sapper cooldown is ready (start of macro), inherits from |cff00ffffshiftStart")
+        PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift if sapper is on CD (start of macro), inherits from |cff00ffffshiftStart")
     end
     do
         local name = "formStart"

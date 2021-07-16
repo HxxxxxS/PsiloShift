@@ -40,9 +40,9 @@ Can mix and match with sapper cooldown, healthstone cooldown, also supports my m
 /use [mod:shift]Ironshield Potion;Greater Stoneshield Potion
 /click formEnd
 ```
-### Sapper
+### Goblin Sapper
 ```lua
-/click shiftSap
+/click [mod:shift]shiftSuperSap;shiftSap
 /click formStart
 /use [mod:shift]Super Sapper Charge;Goblin Sapper Charge
 /click formEnd
@@ -64,7 +64,8 @@ The formStart function will set your actionbar to a number from 1-6 using the fo
 
     Checks if potions are on cooldown. Also inherits the code from `shiftStart`.
 * `/click shiftHS` - same thing as above, but for Healthstones instead of pots
-* `/click shiftSap` - same thing as above, but for Sappers instead of pots
+* `/click shiftSap` - same thing as above, but for Goblin Sappers instead of pots
+* `/click shiftSuperSap` - same thing as above, but for Super Sappers instead of pots
 * `/click shiftEnd` - `/run SetCVar("autoUnshift",1)`
 
     Enables autoUnshift again at end of macro.
@@ -77,6 +78,8 @@ The formStart function will set your actionbar to a number from 1-6 using the fo
 * `/click barReset` - `/changeactionbar 1`
 
     Resets our actionbar number back to 1. This is inherited into the `formEnd` command. 
+
+Note that you CAN use macro modifiers on `/click` commands. For an example take a look at the Sapper macro example above.
 
 # Questions? 
 Find Psilocybin-Mograine in the userlist on the Druid Discord.

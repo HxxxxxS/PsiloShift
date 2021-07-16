@@ -51,7 +51,14 @@ do
         local b = _G[name] or CreateFrame('Button', name, nil, 'SecureActionButtonTemplate,SecureHandlerBaseTemplate');
         b:SetAttribute('type', 'macro');
         b:SetAttribute('macrotext', '/click formStart\n/run if GetItemCooldown(10646)>0 then SetCVar("autoUnshift",0) end');
-        PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift if sapper is on CD (start of macro), inherits from |cff00ffffshiftStart")
+        PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift if Goblin Sapper is on CD (start of macro), inherits from |cff00ffffshiftStart")
+    end
+    do
+        local name = "shiftSuperSap"
+        local b = _G[name] or CreateFrame('Button', name, nil, 'SecureActionButtonTemplate,SecureHandlerBaseTemplate');
+        b:SetAttribute('type', 'macro');
+        b:SetAttribute('macrotext', '/click formStart\n/run if GetItemCooldown(23827)>0 then SetCVar("autoUnshift",0) end');
+        PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift if Super Sapper is on CD (start of macro), inherits from |cff00ffffshiftStart")
     end
     do
         local name = "formStart"

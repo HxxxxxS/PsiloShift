@@ -36,28 +36,28 @@ do
         local name = "shiftPot"
         local b = _G[name] or CreateFrame('Button', name, nil, 'SecureActionButtonTemplate,SecureHandlerBaseTemplate');
         b:SetAttribute('type', 'macro');
-        b:SetAttribute('macrotext', '/click formStart\n/run if GetItemCooldown(13446)>0 then SetCVar("autoUnshift",0) end');
+        b:SetAttribute('macrotext', '/click shiftStart\n/run if GetItemCooldown(13446)>0 then SetCVar("autoUnshift",0) end');
         PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift if potions are on CD (start of macro), also inherits from |cff00ffffshiftStart")
     end
     do
         local name = "shiftHS"
         local b = _G[name] or CreateFrame('Button', name, nil, 'SecureActionButtonTemplate,SecureHandlerBaseTemplate');
         b:SetAttribute('type', 'macro');
-        b:SetAttribute('macrotext', '/click formStart\n/run if GetItemCooldown(20520)>0 then SetCVar("autoUnshift",0) end');
+        b:SetAttribute('macrotext', '/click shiftStart\n/run if GetItemCooldown(20520)>0 then SetCVar("autoUnshift",0) end');
         PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift if healthstone is on CD (start of macro), inherits from |cff00ffffshiftStart")
     end
     do
         local name = "shiftSap"
         local b = _G[name] or CreateFrame('Button', name, nil, 'SecureActionButtonTemplate,SecureHandlerBaseTemplate');
         b:SetAttribute('type', 'macro');
-        b:SetAttribute('macrotext', '/click formStart\n/run if GetItemCooldown(10646)>0 then SetCVar("autoUnshift",0) end');
+        b:SetAttribute('macrotext', '/click shiftStart\n/run if GetItemCooldown(10646)>0 then SetCVar("autoUnshift",0) end');
         PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift if Goblin Sapper is on CD (start of macro), inherits from |cff00ffffshiftStart")
     end
     do
         local name = "shiftSuperSap"
         local b = _G[name] or CreateFrame('Button', name, nil, 'SecureActionButtonTemplate,SecureHandlerBaseTemplate');
         b:SetAttribute('type', 'macro');
-        b:SetAttribute('macrotext', '/click formStart\n/run if GetItemCooldown(23827)>0 then SetCVar("autoUnshift",0) end');
+        b:SetAttribute('macrotext', '/click shiftStart\n/run if GetItemCooldown(23827)>0 then SetCVar("autoUnshift",0) end');
         PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift if Super Sapper is on CD (start of macro), inherits from |cff00ffffshiftStart")
     end
     do

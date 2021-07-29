@@ -15,7 +15,7 @@ do
         local name = "stunCheck"
         local b = _G[name] or CreateFrame('Button', name, nil, 'SecureActionButtonTemplate,SecureHandlerBaseTemplate');
         b:SetAttribute('type', 'macro');
-        b:SetAttribute('macrotext', '/run if C_LossOfControl.GetActiveLossOfControlDataCount()>1 then SetCVar("autoUnshift",0) end');
+        b:SetAttribute('macrotext', '/run if C_LossOfControl.GetActiveLossOfControlDataCount()>0 then SetCVar("autoUnshift",0) end');
         PSprint("'/click "..name.."' |cff00ff00- disable autoUnshift if stunned (inherited in |cff00ffffshiftStart |rand |cff00ffffformStart|r)")
     end    
     do

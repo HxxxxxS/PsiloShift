@@ -1,5 +1,5 @@
 ## Interface: 20501
-## Version: v2-classic
+## Version: 1.2.0
 ## Title: PsiloShift
 ## Notes: Helper addon for druid powershift macros
 ## Author: Psilocybin-Mograine

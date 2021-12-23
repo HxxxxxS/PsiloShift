@@ -1,3 +1,9 @@
+# ABANDONED
+
+Please use https://github.com/ForsakenNGS/DruidMacroHelper instead.
+DMH has improved GCD checks aswell as a proper stuncheck implementation. It is forked from this addon, and I am helping to maintain it.
+
+
 # PsiloShift (BCC) - By Psilocybin-Mograine(H)
 ## Helper addon to optimize character count in your shapeshift macros
 
